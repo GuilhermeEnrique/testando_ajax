@@ -6,13 +6,13 @@ $arquivo = "usuario.txt";
 switch ($req) {
     case 1:
         $CEP = filter_input(INPUT_POST, "txtCEP", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        $rua = filter_input(INPUT_POST, "txtRua", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $Rua = filter_input(INPUT_POST, "txtRua", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $ddd = filter_input(INPUT_POST, "txtDDD", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $bairro = filter_input(INPUT_POST, "txtBairro", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $estado = filter_input(INPUT_POST, "txtEstado", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $cidade = filter_input(INPUT_POST, "txtCidade", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        $str = "CEP: {$CEP} | Rua: {$rua} | Logradouro: {$ddd} | Bairro: {$bairro} | Estado: {$estado} | Cidade: {$cidade} |";
+        $str = "CEP: {$CEP} | Rua: {$Rua} | Logradouro: {$ddd} | Bairro: {$bairro} | Estado: {$estado} | Cidade: {$cidade} |";
 
         $fp = fopen($arquivo, "w ");
         if (fwrite($fp, "{$str}")) {
