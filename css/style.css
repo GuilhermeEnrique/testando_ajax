@@ -1,0 +1,13 @@
+body{
+    margin: 50px;
+}
+.title{
+    margin-left: 20px;
+    color: red;
+}
+.forms{
+    margin-left: 12px;
+}
+#test{
+    margin: 2px;
+}
